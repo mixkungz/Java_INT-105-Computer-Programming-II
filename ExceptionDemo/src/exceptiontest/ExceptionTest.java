@@ -4,6 +4,7 @@ package exceptiontest;
  *
  * @author Phachara
  */
+import java.util.Scanner;
 public class ExceptionTest {
     public static int avg(int n1,int n2) throws ArithmeticException{
         //Normally double may not have ArithmeticException In this case suppose it to int
@@ -20,7 +21,8 @@ public class ExceptionTest {
         System.out.println("****** end sum ******");
         return result;
     }
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ArithmeticException{
+        Scanner sc = new Scanner(System.in);
         /*
         //java.lang.NullPointerException
         String txt = null;
@@ -33,8 +35,11 @@ public class ExceptionTest {
         System.out.println(result);
         */
         System.out.println("****** beginning main ******");
-        int n1=20;
-        int n2=10;
+        System.out.print("n1 : ");
+        int n1=sc.nextInt();
+        sc.nextLine();
+        System.out.print("n2 : ");
+        int n2=sc.nextInt();
         int result= avg(n1,n2);
         System.out.println("****** end main ******");
         System.out.println("****** End,Program");
