@@ -5,11 +5,11 @@ package exceptiontest;
  * @author Phachara
  */
 public class ExceptionTest {
-    public static int avg(int n1,int n2){
+    public static int avg(int n1,int n2) throws ArithmeticException{
         //Normally double may not have ArithmeticException In this case suppose it to int
         System.out.println("****** beginning avg ******");
         int result = 0;
-        result = sum(n1,n2)/0; //ArithmeticException
+        result = sum(n1,n2)/0; //Suppose it to has ArithmeticException
         System.out.println("****** end divide ******");
         return result;
     }
